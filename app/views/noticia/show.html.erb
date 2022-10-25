@@ -1,0 +1,11 @@
+<div class="row container">
+  <p style="color: green"><%= notice %></p>
+  <%= render @noticium %>
+
+
+
+  <div class="col-4"><%= link_to "Edit this noticium", edit_noticium_path(@noticium) %> </div>
+  <div class="col-4"><%= link_to "Back to noticia", noticia_path %></div>
+
+  <div class="col-4"><%= button_to "Destroy this noticium", @noticium, method: :delete %></div>
+</div>

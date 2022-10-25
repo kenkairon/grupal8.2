@@ -1,0 +1,30 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="display-4" >Noticias felices.com </h1>
+  <p class="pa01" >Noticias Felices.com es una página que tiene como objetivo sacarte del mal hábito de consumir noticias negaticas o doomscrolling</p>
+  <p class="pa02" > Revisa las noticias positivas de Chile y el mundo.
+  También puedes ayudar a contribuir con noticias positivas. </p>
+
+  <%= render "noticia/cards" %>
+
+    <div class="ppp row justify-content-center">
+      <div class="col-3">
+        <a href="/noticia/new" class="btn btn-primary btn-lg" role="button">Nueva Noticia</a>
+      </div>
+    </div>
+
+
+
+  <div id="noticia">
+    <% @noticia.each do |noticium| %>
+      <%= render noticium %>
+      <p>
+        <%= link_to "Ver esta noticia", noticium %>
+      </p>
+    <% end %>
+  </div>
+
+  <%# No visble %>
+  <% link_to "Nueva Noticia", new_noticium_path %>
+</div>
